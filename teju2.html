@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>juice point</title>
+    <link rel="stylesheet" href="teju2.css">
+</head>
+<body>
+    <center> <h1>JUICE POINT</h1>
+<div><label for="">
+    <input type="radio" name="drink" id="milkshake"><b>milkshake</b></label>
+    <label for="">
+        <input type="radio" name="drink" id="tea"><b>tea</b></label>
+        <label for="">
+            <input type="radio" name="drink" id="milk"><b>milk</b></label>
+            <label for="">
+                <input type="radio" name="drink" id="juice"><b>juice</b></label>
+                
+                    
+                    <button onclick="Add()">Add</button>
+                    <button onclick="Total()">Total</button>
+                    <p> <b>milkshake count</b><span id="milk shakecount">0</span></p>
+                        <p> <b>count</b>:<span id="teacount">0</span></p>
+                            <p><b> Milk count</b><span id="milkcount">0</span></p>
+
+                            <p><b> juice count</b><span id="juicecount">0</span></p>
+                                <p id="bill"></p></div>
+                                <script>
+                                    let milkshakecount=0;
+                                    let teacount=0;
+                                    let milkcount=0;
+                                    let juicecount=0;
+
+                                    let milkshakerate=15;
+                                    let tearate=20;
+                                    let milkrate=25;
+                                    let juicerate=50;
+
+                                    function  Add(){
+                                    const selecteddrink=document.querySelector('input[name="drink"]:checked')
+                                    if(selecteddrink){
+                                        const drinktype=selecteddrink.id;
+                                        if (drinktype=="milkshake"){
+                                            cfecount++;
+                                            document.getElementById('milkshakecount').textContent=cfecount;
+                                        }else if(drinktype==='tea'){  
+                                            teacount++;
+                                            document.getElementById('teacount').textContent= teacount;
+                                        }else if(drinktype==='milk'){ 
+                                            milkcount++;
+                                            document.getElementById('milkcount').textContent=milkcount;
+                                        }else if(drinktype==='juice'){
+                                            juicecount++;
+                                            document.getElementById('juicecount').textContent=juicecount;
+                                        }
+                                    }
+                                    }
+                                    function Total(){
+                                        let Total=(teacount*tearate)+(milkshakecount*milkshakerate)+(milkcount*milkrate)+(juicecount*juicerate)
+                                        document.getElementById('bill').textContent="Total:"+"₹"+Total;
+                                    }
+                        
+                                </script>
+                                </center>
+                                
+                                
+    
+</body>
+</html>

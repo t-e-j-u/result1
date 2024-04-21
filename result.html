@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>result</h1>
+    <h2>Enter your name to see your results</h2>
+    <label for="">name:-</label>
+    <input type="text"id="name"placeholder="enter your name">
+    <label for="">UUCMS:-</label>
+    <input type="text"id="num"placeholder="enter your uucms number">
+    <button onclick="result()">submit</button>
+    <p id="result"></p>
+    <script>
+        function result(){
+            var name=document.getElementById("name").value;
+            var result=document.getElementById("result");
+            var num=document.getElementById("num")
+            var marks=Math.random()*100;
+            if(marks==0|| marks<34){
+                result.innerHTML=name+" "+"is  fail"+" "+marks.toFixed(2);}
+            else if(marks==35||marks<59){
+                result.innerHTML=name+" "+"is second class"+" "+marks.toFixed(2);}   
+            else if(marks==60||marks<79){
+                result.innerHTML=name+" "+"is first class"+" "+marks.toFixed(2);}   
+            else if(marks==80||marks<100){
+                result.innerHTML=name+" "+" is Distinction"+" "+marks.toFixed(2);} 
+            }
+    </script>
+
+
+            
+        
+</body>
+</html>
+
+
